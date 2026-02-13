@@ -19,8 +19,8 @@ export const metadata: Metadata = {
   },
   description: "Developer portfolio: projects, experience, and contact.",
   icons: {
-    icon: [{ url: "/og.png?v=6", type: "image/png", sizes: "any" }],
-    shortcut: "/og.png?v=6",
+    icon: [{ url: "/sunny.ico", type: "image/x-icon", sizes: "any" }],
+    shortcut: "/sunny.ico",
     apple: [{ url: "/og.png?v=6", sizes: "180x180", type: "image/png" }],
   },
   openGraph: {

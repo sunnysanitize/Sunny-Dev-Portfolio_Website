@@ -78,7 +78,15 @@ export default function Home() {
     // and replace the `blank` title/description text.
     {
       name: "Heat Mapping $5,000+ Thefts Around UTSG",
-      description: "Coming Soon",
+      description:
+        "- I got my stuff stolen at the Atheltic Centre at UofT and almost\n" +
+        "lost most of my valuables, so I decided to make a project on theft around UTSG.\n" +
+        "- A full-stack crime intelligence web app that maps Toronto Police\n" +
+        "theft-over-$5,000 incidents around the UofT St. George campus.\n" +
+        "- It runs a Python/FastAPI pipeline that filters records by campus\n" +
+        "geospatial boundaries, normalizes data in SQLite, and serves a clean API.\n" +
+        "- Includes a Next.js/TypeScript frontend with an interactive\n" +
+        "OpenStreetMap heatmap, live summary metrics, and incident sample tables.",
       projectUrl: "https://theftdataproject.sunnyzhang.dev",
       sourceUrl: "https://github.com/sunnysanitize/uoft-theft-map-project",
       image: "/theftdatabase.png",
@@ -212,14 +220,7 @@ export default function Home() {
                           </span>
                           Website
                         </a>
-                      ) : (
-                        <span className="inline-flex min-w-[92px] items-center justify-center border-2 border-[#0f0f0f] bg-[#f3ead5] px-3 py-1.5 text-[11px] uppercase tracking-wide text-[#6e614d] [box-shadow:2px_2px_0_#0f0f0f] sm:text-[12px]">
-                          <span className="mr-1.5 inline-flex h-4 w-4 items-center justify-center overflow-hidden">
-                            <Image src="/globe.svg" alt="Website icon" width={14} height={14} className="h-3.5 w-3.5 object-contain opacity-60" />
-                          </span>
-                          Website
-                        </span>
-                      )}
+                      ) : null}
                       {hasSourceLink ? (
                         <a
                           href={project.sourceUrl}
