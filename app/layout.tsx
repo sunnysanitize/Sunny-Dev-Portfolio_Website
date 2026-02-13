@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     description: "Developer portfolio: projects, experience, and contact.",
     url: "https://sunnyzhang.dev",
     siteName: "Sunny Zhang",
-    images: [{ url: "/og.png" }], // put og.png in /public
+    images: [{ url: "/og.png" }],
     type: "website",
   },
 };
