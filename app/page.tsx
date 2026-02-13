@@ -17,7 +17,7 @@ const readableFont = Nunito({
 export default function Home() {
   const [isEmailModalOpen, setIsEmailModalOpen] = useState(false);
   const [copyStatus, setCopyStatus] = useState<"idle" | "copied" | "error">("idle");
-  const linkedInUrl = "https://www.linkedin.com/in/your-linkedin-handle/";
+  const linkedInUrl = "https://www.linkedin.com/in/sunny-zhang-413902297/";
   const emailAddress = "ssunny.zhang@mail.utoronto.ca";
   const socialIcons = {
     linkedIn: "/LinkedInLogo.png",
@@ -343,7 +343,7 @@ export default function Home() {
             <p className={`${readableFont.className} mt-2 text-[13px] text-[#4a3e2f]`}>
               Copy and paste this address:
             </p>
-            <div className="mt-3 border-2 border-[#0f0f0f] bg-white px-3 py-2 text-[13px] text-[#2a241c]">
+            <div className="mt-3 border-2 border-[#0f0f0f] bg-white px-3 py-2 text-[11px] leading-snug text-[#2a241c] [overflow-wrap:anywhere] sm:text-[13px]">
               {emailAddress}
             </div>
             <div className="mt-4 flex gap-2">
