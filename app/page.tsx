@@ -70,6 +70,7 @@ export default function Home() {
         "- Includes a CLI report tool, a Flask dashboard with threshold tuning and\n" +
         "Monte Carlo simulation, plus unit tests for transition/state logic.",
       projectUrl: "",
+      showWebsiteButton: false,
       sourceUrl: "https://github.com/sunnysanitize/Markov-Chain-Model-for-Daily-Return-Regimes",
       image: "/MarkovForecast.png",
     },
@@ -183,6 +184,7 @@ export default function Home() {
               {projects.map((project, index) => {
                 const hasProjectLink = project.projectUrl.trim().length > 0;
                 const hasSourceLink = project.sourceUrl.trim().length > 0;
+                const showWebsiteButton = project.showWebsiteButton !== false;
                 const baseCardClass = "border-2 border-[#0f0f0f] bg-[#fff9eb] p-2 text-[13px] text-[#2f281f] transition hover:bg-[#f3ead7] sm:text-[15px]";
                 const actionClass = "inline-flex min-w-[92px] items-center justify-center border-2 border-[#0f0f0f] bg-[#fff2cc] px-3 py-1.5 text-[11px] uppercase tracking-wide text-[#2f2519] [box-shadow:2px_2px_0_#0f0f0f] transition hover:-translate-y-0.5 hover:bg-[#f4de9c] sm:text-[12px]";
 
@@ -206,26 +208,28 @@ export default function Home() {
                       {project.description}
                     </p>
                     <div className="mt-3 flex flex-wrap gap-2">
-                      {hasProjectLink ? (
-                        <a
-                          href={project.projectUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className={actionClass}
-                        >
-                          <span className="mr-1.5 inline-flex h-4 w-4 items-center justify-center overflow-hidden">
-                            <Image src="/globe.svg" alt="Website icon" width={14} height={14} className="h-3.5 w-3.5 object-contain" />
-                          </span>
-                          Website
-                        </a>
-                      ) : (
-                        <span className="inline-flex min-w-[92px] items-center justify-center border-2 border-[#0f0f0f] bg-[#f3ead5] px-3 py-1.5 text-[11px] uppercase tracking-wide text-[#6e614d] [box-shadow:2px_2px_0_#0f0f0f] sm:text-[12px]">
-                          <span className="mr-1.5 inline-flex h-4 w-4 items-center justify-center overflow-hidden">
-                            <Image src="/globe.svg" alt="Website icon" width={14} height={14} className="h-3.5 w-3.5 object-contain opacity-60" />
-                          </span>
-                          Website
-                        </span>
-                      )}
+                      {showWebsiteButton
+                        ? hasProjectLink ? (
+                            <a
+                              href={project.projectUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className={actionClass}
+                            >
+                              <span className="mr-1.5 inline-flex h-4 w-4 items-center justify-center overflow-hidden">
+                                <Image src="/globe.svg" alt="Website icon" width={14} height={14} className="h-3.5 w-3.5 object-contain" />
+                              </span>
+                              Website
+                            </a>
+                          ) : (
+                            <span className="inline-flex min-w-[92px] items-center justify-center border-2 border-[#0f0f0f] bg-[#f3ead5] px-3 py-1.5 text-[11px] uppercase tracking-wide text-[#6e614d] [box-shadow:2px_2px_0_#0f0f0f] sm:text-[12px]">
+                              <span className="mr-1.5 inline-flex h-4 w-4 items-center justify-center overflow-hidden">
+                                <Image src="/globe.svg" alt="Website icon" width={14} height={14} className="h-3.5 w-3.5 object-contain opacity-60" />
+                              </span>
+                              Website
+                            </span>
+                          )
+                        : null}
                       {hasSourceLink ? (
                         <a
                           href={project.sourceUrl}
