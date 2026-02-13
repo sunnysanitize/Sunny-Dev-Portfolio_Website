@@ -13,12 +13,18 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Sunny Zhang | Portfolio",
+  title: {
+    default: "Sunny Zhang | Portfolio",
+    absolute: "Sunny Zhang | Portfolio",
+  },
   description: "Developer portfolio: projects, experience, and contact.",
   icons: {
-    icon: "/favicon.ico?v=2",
-    shortcut: "/favicon.ico?v=2",
-    apple: "/favicon.ico?v=2",
+    icon: [
+      { url: "/icon.png?v=3", type: "image/png", sizes: "256x256" },
+      { url: "/favicon.ico?v=3", type: "image/x-icon" },
+    ],
+    shortcut: "/favicon.ico?v=3",
+    apple: [{ url: "/apple-icon.png?v=3", sizes: "256x256", type: "image/png" }],
   },
   openGraph: {
     title: "Sunny Zhang | Portfolio",
